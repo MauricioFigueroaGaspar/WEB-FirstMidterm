@@ -1,0 +1,25 @@
+h1 {
+    font-family: "Space Mono";
+    padding: 0px 30px;
+}
+
+body {
+    background-color: #c2e3e3;
+    display: grid;
+    justify-content: center;
+}
+
+.calculator-base {
+    background-color: #f4fafa;
+    border-radius: 20px;
+}
+
+.right-side {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    /*background-color: hsl(172, 67%, 45%);*/
+}
+
+.right-side p {
+    color: white;
+}

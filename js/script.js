@@ -39,8 +39,8 @@ function updateData(){
         tipPerPerson = (costInput*tip)/numberOfPeopleInput;
         totalPerPerson = (costInput + (costInput*tip))/numberOfPeopleInput;
         // Integrar los valores al html
-        document.getElementById("tipAmountPerPerson").innerHTML = "$" + tipPerPerson;
-        document.getElementById("totalPerPerson").innerHTML = "$" + totalPerPerson;
+        document.getElementById("tipAmountPerPerson").innerHTML = "$" + Math.ceil(tipPerPerson * 100) / 100;
+        document.getElementById("totalPerPerson").innerHTML = "$" + Math.ceil(totalPerPerson * 100) / 100;
     }
 }
 // Definir el intervalo para que se se repita la funcion

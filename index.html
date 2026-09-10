@@ -44,7 +44,7 @@
       <div class="col-12 col-lg-6 p-5">
         <div class="row">
           <p>Bill</p>
-          <input type="text" id="cost">
+          <input type="number" min="0" oninput="this.value = Math.abs(this.value)" id="cost">
         </div>
         <div class="row">
           <p>Select Tip %</p>
@@ -67,13 +67,13 @@
               <button id="button5">50%</button>
             </div>
             <div class="col-4">
-              <input type="text" id="customTip"></input>
+              <input type="number" min="0" oninput="this.value = Math.abs(this.value)" id="customTip"></input>
             </div>
           </div>
         </div>
         <div class="row">
           <p>Number of People</p>
-          <input type="text" class="text" id="number-of-people">
+          <input type="number" min="0" oninput="this.value = Math.abs(this.value)" class="text" id="number-of-people">
         </div>
       </div>
 

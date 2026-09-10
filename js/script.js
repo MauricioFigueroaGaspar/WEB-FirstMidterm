@@ -1,15 +1,26 @@
+// El costo original
 const costInput = parseFloat(document.getElementById("cost").value);
+// Los radios para seleccionar los valores de la propina
 const radio1 = document.querySelector("#radio1");
 const radio2 = document.querySelector("#radio2");
 const radio3 = document.querySelector("#radio3");
 const radio4 = document.querySelector("#radio4");
 const radio5 = document.querySelector("#radio5");
 const radio6 = document.querySelector("#radio6");
+// La variable para tener el "input" de la propina custom
 const customRadioInput = document.querySelector("#customTip");
+// El numero de personas
 const numberOfPeopleInput = parseFloat(document.getElementById("number-of-people").value);
+// Boton para el reset
+const resetButton = document.getElementById("resetButton")
+// El valor de la propina
 let tip = 0.0;
+// El valor de la propina por persona
+let tipPerPerson = 0.0;
+// El costo de cuanto tiene que pagar cada quien con la propina incluida
+let totalPerPerson = 0.0;
 
-function calculateTip() {
+
     // Dependiendo de cual opción esta seleccionada, cambiara el valor del tip
     radio1.addEventListener("change", (e) => { if (e.target.checked) tip = .5; });
     radio2.addEventListener("change", (e) => { if (e.target.checked) tip = .10; });
@@ -19,6 +30,23 @@ function calculateTip() {
 
     // La siguiente opcion es para el radio con la propina custom
     radio6.addEventListener("change", (e) => {
-                
+       if (e.taget.checked){
+        customTipInput.style.display = "inline.block";
+        tip = (paseFloat(customTipInput.value) || 0) / 100.0;
+       } else {
+        customTipInput.style.display = "";
+       }
     });
-};
+
+// Calcular la propina ya teniendo los valores
+if(costInput > 0 && numberOfPeopleInput > 0 ){
+    tipPerPerson = (costInput*tip)/numberOfPeopleInput;
+    totalPerPerson = (costInput + (costInput*tip))/numberOfPeopleInput;
+    // Integrar los valores al html
+    document.getElementById("tipAmountPerPerson").innerHTML = "" + tipPerPerson;
+    document.getElementById("totalPerPerson").innerHTML = "" + totalPerPerson;
+}
+
+    // Resetear todos los valores al presionar el boton de RESET
+    resetButton.addEventListener("click", (e) => { location.reload(); });
+

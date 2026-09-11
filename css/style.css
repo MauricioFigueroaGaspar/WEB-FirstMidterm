@@ -60,7 +60,6 @@ body {
     padding: 0;
 }
 
-/* Coloca la etiqueta <i> flotando a la izquierda y centrada verticalmente */
 .input-container i {
     position: absolute;
     top: 50%;
@@ -69,13 +68,39 @@ body {
     display: flex;
 }
 
-/* Controla el tamaño exacto de tu archivo SVG */
 .input-container i img {
     width: 12px;  
     height: 16px;
     display: block;
 }
 
+.row-cols-2 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.tip-btn {
+    background-color: hsl(183, 100%, 15%);
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: x-large;
+    color: white;
+    width: 100%;
+}
+
+.custom {
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;
+    border: none;
+    padding: 6px 15px 6px 6px;
+    width: 100%;
+    font-family: "Space Mono", monospace;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    box-sizing: border-box;
+}
 
 .info {
     font-family: "Space Mono", monospace;
@@ -98,14 +123,14 @@ body {
     font-style: normal;
     font-size: xx-large;
     color: hsl(172, 67%, 45%);
+    text-align: right;
 }
 
 .box {
-    /* background-color: hsl(189, 41%, 97%); */
-    background-color: hsl(180, 3%, 60%);
+    background-color: hsl(189, 41%, 97%);
     border-radius: 5px;
     border: none;
-    padding: 6px 6px 6px 40px;
+    padding: 6px 15px 6px 40px;
     width: 100%;
     font-family: "Space Mono", monospace;
     font-size: x-large;
@@ -113,6 +138,19 @@ body {
     text-align: right;
     color: hsl(183, 100%, 15%);
     box-sizing: border-box;
+}
+
+.reset {
+    background-color: hsl(172, 67%, 45%);
+    font-family: "Space Mono", monospace;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+    border: none;
+    padding: 0px;
+    width: 100%;
+
 }
 
 @media (max-width: 767px) {

@@ -17,155 +17,195 @@
 }
 
 body {
-    background-color: hsl(185, 41%, 84%);
-    display: grid;
-    justify-content: center;
+  background-color: hsl(185, 41%, 84%);
+  display: grid;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .title {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    margin: 30px 30px;
-    text-align: center;
-    line-height: 33px;
-    letter-spacing: -3px;
-    color: hsl(186, 14%, 43%);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  margin: 30px 30px;
+  text-align: center;
+  line-height: 33px;
+  letter-spacing: -3px;
+  color: hsl(186, 14%, 43%);
 }
 
 .calculator-base {
-    background-color: white;
-    border-radius: 20px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .right-side {
-    background-color: hsl(183, 100%, 15%);
-    border-radius: 15px;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
 }
 
 .right-side p {
-    margin: 1px;
+  margin: 1px;
 }
 
 .data {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-    color: hsl(184, 14%, 56%);
-    padding: 0px;
-    margin-bottom: 5px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  color: hsl(184, 14%, 56%);
+  padding: 0px;
+  margin-bottom: 5px;
 }
 
 .input-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    padding: 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
 }
 
 .input-container i {
-    position: absolute;
-    top: 50%;
-    left: 16px; 
-    transform: translateY(-50%); 
-    display: flex;
+  position: absolute;
+  top: 50%;
+  left: 16px; 
+  transform: translateY(-50%); 
+  display: flex;
 }
 
 .input-container i img {
-    width: 12px;  
-    height: 16px;
-    display: block;
+  width: 12px;  
+  height: 16px;
+  display: block;
 }
 
 .tip-btn {
-    background-color: hsl(183, 100%, 15%);
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-size: x-large;
-    color: white;
-    width: 100%;
+  background-color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: x-large;
+  color: white;
+  width: 100%;
 }
 
 .btn.tip-btn:hover {
-    background-color: hsl(172, 67%, 45%) !important;
-
+  background-color: hsl(172, 67%, 45%) !important;
 }
 
 .btn.tip-btn:active {
-    background-color: #9deade !important;
-    border: 1px solid #9deade;
+  background-color: #9deade !important;
+  border: 1px solid #9deade;
 }
 
 .custom {
-    background-color: hsl(189, 41%, 97%);
-    border-radius: 5px;
-    border: none;
-    padding: 6px 15px 6px 6px;
-    width: 100%;
-    font-family: "Space Mono", monospace;
-    font-size: x-large;
-    font-weight: 700;
-    text-align: right;
-    color: hsl(183, 100%, 15%);
-    box-sizing: border-box;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  border: none;
+  padding: 6px 15px 6px 6px;
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  font-size: x-large;
+  font-weight: 700;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  box-sizing: border-box;
 }
 
 .custom::placeholder {
-    color: hsl(184, 14%, 56%);
+  color: hsl(183, 80%, 22%);
+  text-align: right;
 }
 
 .info {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-    color: white;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
 }
 
 .per-person {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-    font-size: small;
-    color: #759494;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: small;
+  color: #759494;
 }
 
 .price {
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-    font-size: xx-large;
-    color: hsl(172, 67%, 45%);
-    text-align: right;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: xx-large;
+  color: hsl(172, 67%, 45%);
+  text-align: right;
 }
 
 .box {
-    background-color: hsl(189, 41%, 97%);
-    border-radius: 5px;
-    border: none;
-    padding: 6px 15px 6px 40px;
-    width: 100%;
-    font-family: "Space Mono", monospace;
-    font-size: x-large;
-    font-weight: 700;
-    text-align: right;
-    color: hsl(183, 100%, 15%);
-    box-sizing: border-box;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  border: none;
+  padding: 6px 15px 6px 40px;
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  font-size: x-large;
+  font-weight: 700;
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  box-sizing: border-box;
+}
+
+.box::placeholder {
+  color: hsl(184, 14%, 56%);
+  opacity: 0.5;
 }
 
 .reset {
-    background-color: hsl(172, 67%, 45%);
-    font-family: "Space Mono", monospace;
-    font-size: large;
-    font-weight: 700;
-    text-align: center;
-    color: hsl(183, 100%, 15%);
-    border: none;
-    width: 100%;
-
+  background-color: hsl(183, 80%, 22%);
+  font-family: "Space Mono", monospace;
+  font-size: large;
+  font-weight: 700;
+  text-align: center;
+  color: hsl(183, 100%, 10%);
+  border: none;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
-    .calculator-base {
-        border-bottom-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-    }
+  body {
+    min-height: 100vh;
+  }
+
+  .calculator-base {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    flex-grow: 1;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    min-height: 100vh;
+    align-content: center;
+  }
+
+  .calculator-base {
+    max-width: 870px;
+    border-radius: 25px;
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    letter-spacing: -2px;
+    line-height: 35px;
+    font-size: 25px !important;
+  }
+
+  .right-side {
+    padding: 40px !important;
+  }
+
+  .price {
+    font-size: 2.8rem;
+  }
 }

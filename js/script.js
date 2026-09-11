@@ -16,7 +16,7 @@ let totalPerPerson = 0.0;
 
 
     // Dependiendo de cual opción esta seleccionada, cambiara el valor del tip
-    button1.addEventListener("click", (e) => { tip = .5; tipInput.value = ""; });
+    button1.addEventListener("click", (e) => { tip = .05; tipInput.value = ""; });
     button2.addEventListener("click", (e) => { tip = .10; tipInput.value = ""; });
     button3.addEventListener("click", (e) =>{ tip = .15; tipInput.value = ""; });
     button4.addEventListener("click", (e) =>{ tip = .25; tipInput.value = ""; });

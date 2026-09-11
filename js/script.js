@@ -43,8 +43,8 @@ function updateData(){
         document.getElementById("totalPerPerson").innerHTML = "$" + Math.ceil(totalPerPerson * 100) / 100;
     } else {
          // Si luego se deja un valor "vacio", que los texto regresen a vacio
-        document.getElementById("tipAmountPerPerson").innerHTML = "$0";
-        document.getElementById("totalPerPerson").innerHTML = "$0";
+        document.getElementById("tipAmountPerPerson").innerHTML = "INSERT VALID DATA";
+        document.getElementById("totalPerPerson").innerHTML = "INSERT VALID DATA";
     }
 }
 // Definir el intervalo para que se se repita la funcion

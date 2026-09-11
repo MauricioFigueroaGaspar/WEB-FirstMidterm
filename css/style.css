@@ -1,25 +1,123 @@
-h1 {
-    padding: 0px 30px;
-    text-align: center;
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-medium {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
-    background-color: #c2e3e3;
+    background-color: hsl(185, 41%, 84%);
     display: grid;
     justify-content: center;
 }
 
+.title {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    margin: 30px 30px;
+    text-align: center;
+    color: hsl(186, 14%, 43%);
+}
+
 .calculator-base {
-    background-color: #f4fafa;
+    background-color: white;
     border-radius: 20px;
 }
 
 .right-side {
     background-color: hsl(183, 100%, 15%);
     border-radius: 15px;
-    /*background-color: hsl(172, 67%, 45%);*/
 }
 
 .right-side p {
+    margin: 1px;
+}
+
+.data {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    color: hsl(184, 14%, 56%);
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+
+/* Coloca la etiqueta <i> flotando a la izquierda y centrada verticalmente */
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 16px; 
+    transform: translateY(-50%); 
+    display: flex;
+}
+
+/* Controla el tamaño exacto de tu archivo SVG */
+.input-container i img {
+    width: 12px;  
+    height: 16px;
+    display: block;
+}
+
+
+.info {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
     color: white;
+}
+
+.per-person {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: small;
+    color: #759494;
+}
+
+.price {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: xx-large;
+    color: hsl(172, 67%, 45%);
+}
+
+.box {
+    /* background-color: hsl(189, 41%, 97%); */
+    background-color: hsl(180, 3%, 60%);
+    border-radius: 5px;
+    border: none;
+    padding: 6px 6px 6px 40px;
+    width: 100%;
+    font-family: "Space Mono", monospace;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    .calculator-base {
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
 }

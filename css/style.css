@@ -27,6 +27,8 @@ body {
     font-weight: 700;
     margin: 30px 30px;
     text-align: center;
+    line-height: 33px;
+    letter-spacing: -3px;
     color: hsl(186, 14%, 43%);
 }
 
@@ -74,11 +76,6 @@ body {
     display: block;
 }
 
-.row-cols-2 {
-    padding: 0px;
-    margin: 0px;
-}
-
 .tip-btn {
     background-color: hsl(183, 100%, 15%);
     font-family: "Space Mono", monospace;
@@ -86,6 +83,16 @@ body {
     font-size: x-large;
     color: white;
     width: 100%;
+}
+
+.btn.tip-btn:hover {
+    background-color: hsl(172, 67%, 45%) !important;
+
+}
+
+.btn.tip-btn:active {
+    background-color: #9deade !important;
+    border: 1px solid #9deade;
 }
 
 .custom {
@@ -100,6 +107,10 @@ body {
     text-align: right;
     color: hsl(183, 100%, 15%);
     box-sizing: border-box;
+}
+
+.custom::placeholder {
+    color: hsl(184, 14%, 56%);
 }
 
 .info {
@@ -143,12 +154,11 @@ body {
 .reset {
     background-color: hsl(172, 67%, 45%);
     font-family: "Space Mono", monospace;
-    font-size: x-large;
+    font-size: large;
     font-weight: 700;
     text-align: center;
     color: hsl(183, 100%, 15%);
     border: none;
-    padding: 0px;
     width: 100%;
 
 }

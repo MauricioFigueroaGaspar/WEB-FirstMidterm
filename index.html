@@ -2,110 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Space+Mono" class="rel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <title>Tip calculator app</title>
-
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <h1>S P L I</h1>
-  <h1>T T E R</h1>
+  <h1 class="title fs-2">S P L I<br>T T E R</h1>
 
   <div class="card shadow calculator-base">
-    <div class="row justify-content-center p-3 mx-0">
+    <div class="row justify-content-center p-4 mx-0">
       
       <!-- Left side -->
-      <div class="col-12 col-lg-6 p-5">
-        <div class="row">
-          <p>Bill</p>
-          <input type="text">
-        </div>
-        <div class="row">
-          <p>Select Tip %</p>
-          <div class="row">
-            <div class="col-4">
-              <button>%</button>
-            </div>
-            <div class="col-4">
-              <button>%</button>
-            </div>
-            <div class="col-4">
-              <button>%</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4">
-              <button>%</button>
-            </div>
-            <div class="col-4">
-              <button>%</button>
-            </div>
-            <div class="col-4">
-              <button>%</button>
-            </div>
+      <div class="col-12 col-lg-6 mt-3 mb-3 px-4">
+
+        <div class="row mx-0 mb-3">
+          <p class="data">Bill</p>
+          <div class="input-container">
+            <i><img src="images/icon-dollar.svg" alt="icon dollar"></i>
+            <input type="text" inputmode="decimal" id="cost" class="box" placeholder="0">
           </div>
         </div>
-        <div class="row">
-          <p>Number of People</p>
-          <input type="text" class="text">
+
+        <div class="mb-3">
+          <p class="data mt-4 mb-3">Select Tip %</p>
+          <div class="row row-cols-2 g-3 row-cols-lg-3">
+            <div class="col">
+              <button type="button" class="btn tip-btn" data-tip="0.05">5%</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn tip-btn" data-tip="0.10">10%</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn tip-btn" data-tip="0.15">15%</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn tip-btn" data-tip="0.25">25%</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn tip-btn" data-tip="0.50">50%</button>
+            </div>
+            <div class="col">
+              <input type="text" inputmode="decimal" id="customTip" class="custom" placeholder="Custom">
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mx-0 mb-3">
+          <p class="data mt-3">Number of People</p>
+          <div class="input-container">
+            <i><img src="images/icon-person.svg" alt="icon person"></i>
+            <input type="text" inputmode="numeric" id="number-of-people" class="box" placeholder="0">
+          </div>
         </div>
       </div>
 
       <!-- Right side -->
-      <div class="col-12 col-lg-6 p-5 p-lg-4 right-side">
-          <div>
-           <div class="row">
-             <div class="col">
-               <p>Tip Amount</p>
-               <p>/ person</p>
-              </div>
-              <div class="col">
-                <h2>$0.00</h2>
-              </div>
+      <div class="col-12 col-lg-6 pt-5 pb-4 px-4 p-lg-4 right-side d-lg-flex flex-lg-column justify-content-lg-between">
+        <div>
+          <div class="row align-items-center">
+            <div class="col">
+              <p class="info">Tip Amount</p>
+              <p class="per-person">/ person</p>
             </div>
-            <div class="row">
-              <div class="col">
-                <p>Total</p>
-                <p>/ person</p>
-              </div>
-              <div class="col">
-                <h2>$0.00</h2>
-              </div>
+            <div class="col">
+              <p class="price" id="tipAmountPerPerson">$0.00</p>
             </div>
-            <div class="row">
-              <input type="text">
+          </div>
+          <div class="row mt-3 mt-lg-4 align-items-center">
+            <div class="col">
+              <p class="info">Total</p>
+              <p class="per-person">/ person</p>
+            </div>
+            <div class="col">
+              <p class="price" id="totalPerPerson">$0.00</p>
             </div>
           </div>
         </div>
 
+        <div class="row">
+          <div class="col">
+            <button type="button" id="resetButton" class="btn reset mt-4 mt-lg-0 p-2">RESET</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
